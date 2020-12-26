@@ -6,7 +6,15 @@ import {useTrackPlayerEvents} from 'react-native-track-player/lib/hooks';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Slider from '@react-native-community/slider';
 
-import { Container, ActionsContainer, ControlButtons, ImageContainer, SongDetails, SongName, BandName } from './styles';
+import { 
+  Container, 
+  ActionsContainer, 
+  ControlButtons, 
+  ImageContainer, 
+  SongDetails, 
+  SongName, 
+  BandName 
+} from './styles';
 
 async function trackPlayerInit() {
   await TrackPlayer.setupPlayer();
