@@ -16,7 +16,15 @@ import {
   BandName 
 } from './styles';
 
-async function trackPlayerInit() {
+
+const App: React.FC = () => { 
+ const [isTrackPlayerInit, setIsTrackPlayerInit] = useState(false);
+ const [isPlaying, setIsPlaying] = useState(false);
+ const [sliderValue, setSliderValue] = useState(0);
+ const [isSeeking, setIsSeeking] = useState(false);
+ const {position, duration} = useTrackPlayerProgress(250);
+
+ async function trackPlayerInit() {
   await TrackPlayer.setupPlayer();
 
   TrackPlayer.updateOptions({
@@ -41,14 +49,6 @@ async function trackPlayerInit() {
   });
   return true;
 };
-
-
-const App: React.FC = () => { 
- const [isTrackPlayerInit, setIsTrackPlayerInit] = useState(false);
- const [isPlaying, setIsPlaying] = useState(false);
- const [sliderValue, setSliderValue] = useState(0);
- const [isSeeking, setIsSeeking] = useState(false);
- const {position, duration} = useTrackPlayerProgress(250);
  
  useEffect(() => {
    async function startPlayer() {
