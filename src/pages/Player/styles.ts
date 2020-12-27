@@ -8,6 +8,11 @@ export const Container = styled.View`
   justify-content: space-between;
 `;
 
+export const Header = styled.View`
+  width: 100%;
+  height: 20px;
+`;
+
 export const ActionsContainer = styled.View``;
 
 export const ImageContainer = styled.View`
